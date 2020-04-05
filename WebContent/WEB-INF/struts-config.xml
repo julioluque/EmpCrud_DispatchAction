@@ -16,7 +16,7 @@
 			<forward name="fail" path="/fail.jsp"></forward>
 		</action>
 
-		<action path="/locale" type="controller.LangChangeController">
+		<action path="/locale" type="controller.LangChangeController" parameter="submit">
 			<forward name="samepage" path="/index.jsp" />
 		</action>
 

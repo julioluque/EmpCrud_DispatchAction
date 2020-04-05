@@ -6,12 +6,6 @@ import java.sql.PreparedStatement;
 
 public class EmployeeDao {
 
-//	Class.forName("oracle.jdbc.OracleDriver");
-//	Connection con = DriverManager.getConnection("jdbc:oracle:thin@localhost:1521:xe", "system", "password");
-
-//	Class.forName("com.mysql.jdbc.Driver");
-//	Connection con = DriverManager.getConnection("jdbc:mysql://localhost/strutsCrud", "root", "1234");
-	
 	public int save(int id, String name, String email, float salary) throws Exception {
 
 		Class.forName("oracle.jdbc.OracleDriver");
@@ -36,7 +30,9 @@ public class EmployeeDao {
 		ps.setString(2, email);
 		ps.setFloat(3, salary);
 		ps.setInt(4, id);
+		
 		int i = ps.executeUpdate();
+
 		return i;
 	}
 }

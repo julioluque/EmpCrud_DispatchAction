@@ -17,22 +17,13 @@ public class RegController extends DispatchAction {
 	public ActionForward register(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		
-//		Read data using request object
-		/*
-		int id = Integer.parseInt(request.getParameter("id"));
-		String name = request.getParameter("name");
-		String email = request.getParameter("email");
-		float salary = Float.parseFloat(request.getParameter("salary"));
-		 */
-		
 //		Read data using form beans
-//		/*
 		RegForm rf = (RegForm) form;
 		int id = rf.getId();
 		String name = rf.getName();
 		String email = rf.getEmail();
 		float salary = rf.getSalary();
-//		*/
+
 		EmployeeDao edao = new EmployeeDao();
 		int i = edao.save(id, name, email, salary);
 		
@@ -47,22 +38,13 @@ public class RegController extends DispatchAction {
 	public ActionForward update(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		
-//		Read data using request object
-		/*
-		int id = Integer.parseInt(request.getParameter("id"));
-		String name = request.getParameter("name");
-		String email = request.getParameter("email");
-		float salary = Float.parseFloat(request.getParameter("salary"));
-		 */
-		
 //		Read data using form beans
-//		/*
 		RegForm rf = (RegForm) form;
 		int id = rf.getId();
 		String name = rf.getName();
 		String email = rf.getEmail();
 		float salary = rf.getSalary();
-//		*/
+
 		EmployeeDao edao = new EmployeeDao();
 		int i = edao.update(id, name, email, salary);
 		
