@@ -1,1 +1,3 @@
-<%=request.getAttribute("res")%>
+REGISTRATION SUCCESS!!!!
+
+EXTENDS DISPATCH ACTIONS

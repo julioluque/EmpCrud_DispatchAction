@@ -16,6 +16,7 @@
 <bean:message key="salary" />:<html:text property="salary" /> <html:errors property="salary" />
 
 <html:submit property="submit"><bean:message key="register" /></html:submit>
+
 <html:submit property="submit"><bean:message key="update" /></html:submit>
 
 <html:link action="locale.do?language.es">Español</html:link>

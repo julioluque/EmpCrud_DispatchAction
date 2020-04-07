@@ -8,20 +8,18 @@
 		<form-bean name="RF" type="beans.RegForm" />
 	</form-beans>
 
-
 	<!-- Form to validator -->
 	<action-mappings>
 		<action path="/reg" name="RF" input="/index.jsp" type="controller.RegController" parameter="submit">
-			<forward name="succes" path="/success.jsp"></forward>
+			<forward name="success" path="/success.jsp"></forward>
 			<forward name="fail" path="/fail.jsp"></forward>
 		</action>
 
 		<action path="/locale" type="controller.LangChangeController" >
 			<forward name="samepage" path="/index.jsp" />
 		</action>
-
 	</action-mappings>
 
 	<message-resources parameter="resources/Messages"></message-resources>
-
+	
 </struts-config>
